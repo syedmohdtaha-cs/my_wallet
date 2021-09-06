@@ -1,0 +1,177 @@
+@import 'https://fonts.googleapis.com/css?family=Bungee+Shade';
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+:focus {
+  outline: none;
+}
+body {
+  background: #77bfa1;
+}
+
+.div {
+  margin: 3rem auto;
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  
+}
+.butn {
+  overflow: visible;
+  border: 0;
+  padding: 0;
+  margin: 1.8rem;
+}
+.bt.striped-shadow span {
+  display: block;
+  position: relative;
+  z-index: 2;
+  border: 5px solid;
+  padding: 0;
+
+}
+span {
+    padding-bottom: 0;
+    
+}
+.bt.striped-shadow.white span {
+  border-color: #fff;
+  color: #fff;
+  background: #77bfa1;
+}
+
+.bt.striped-shadow.blue span {
+  border-color: #5F7A61;
+  background: #77bfa1;
+  color: #5F7A61;
+}
+.bt.striped-shadow.dark span {
+  border-color: #393939;
+  background: #77bfa1;
+  color: #393939;
+}
+.bt.striped-shadow.grey span {
+    border-color: #E6DDC6;
+    background: #77bfa1;
+    color: #E6DDC6;
+  }
+
+.bt {
+  font-family: 'Bungee Shade', sans-serif;
+  height: 80px;
+  line-height: 65px;
+  display: inline-block;
+  letter-spacing: 1px;
+  position: relative;
+  font-size: 1.35rem;
+  transition: opacity .3s, z-index .3s step-end, -webkit-transform .3s;
+  transition: opacity .3s, z-index .3s step-end, transform .3s;
+  transition: opacity .3s,
+    z-index .3s step-end,
+    transform .3s,
+    -webkit-transform .3s;
+  z-index: 1;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.bt {
+  width: 155px;
+  height: 58px;
+  line-height: 38px;
+}
+.bt1 {
+    width: 300px;
+    height: 58px;
+    line-height: 38px;
+  }
+.butn.bt.striped-shadow.white:after, .butn.bt.striped-shadow.white:before {
+  background-image: linear-gradient(
+    135deg,
+    transparent 0,
+    transparent 5px,
+    #fff 5px,
+    #fff 10px,
+    transparent 10px
+  );
+}
+
+.butn.bt.striped-shadow.blue:after, .butn.bt.striped-shadow.blue:before {
+  background-image: linear-gradient(
+    135deg,
+    transparent 0,
+    transparent 5px,
+    #5F7A61 5px,
+    #5F7A61 10px,
+    transparent 10px
+  );
+}
+
+.butn.bt.striped-shadow.dark:after, .butn.bt.striped-shadow.dark:before {
+  background-image: linear-gradient(
+    135deg,
+    transparent 0,
+    transparent 5px,
+    #393939 5px,
+    #393939 10px,
+    transparent 10px
+  );
+}
+.butn.bt.striped-shadow.grey:after, .butn.bt.striped-shadow.grey:before {
+    background-image: linear-gradient(
+      135deg,
+      transparent 0,
+      transparent 5px,
+      #E6DDC6 5px,
+      #E6DDC6 10px,
+      transparent 10px
+    );
+  }
+.butn.bt.striped-shadow:hover:before {
+  max-height: calc(100% - 10px);
+}
+
+.butn.bt.striped-shadow:after {
+  width: calc(100% - 4px);
+  height: 8px;
+  left: -10px;
+  bottom: -9px;
+  background-size: 15px 8px;
+  background-repeat: repeat-x;
+}
+.butn.bt.striped-shadow:after, .butn.bt.striped-shadow:before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  transition: max-height .3s, width .3s, -webkit-transform .3s;
+  transition: transform .3s, max-height .3s, width .3s;
+  transition: transform .3s, max-height .3s, width .3s, -webkit-transform .3s;
+}
+
+.bt.striped-shadow:hover {
+  -webkit-transform: translate(-12px, 12px);
+  -ms-transform: translate(-12px, 12px);
+  transform: translate(-12px, 12px);
+  z-index: 3;
+}
+
+.butn.bt.striped-shadow:hover:after, .butn.bt.striped-shadow:hover:before {
+  -webkit-transform: translate(12px, -12px);
+  -ms-transform: translate(12px, -12px);
+  transform: translate(12px, -12px);
+}
+.butn.bt.striped-shadow:before {
+  width: 8px;
+  max-height: calc(100% - 5px);
+  height: 100%;
+  left: -12px;
+  bottom: -5px;
+  background-size: 8px 15px;
+  background-repeat: repeat-y;
+  background-position: 0 100%;
+}
